@@ -8,4 +8,22 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 
 ### Added
 
--
+- rand_bool helper
+- str_wrap helper
+_ is\_assoc\_array helper
+- array_expand helper
+- array_without helper
+- array\_pull\_value helper
+- array\_pull\_values helper
+- array_hash helper
+- object_hash helper
+- has\_public\_method helper
+- carbon helper
+- create\_temporary\_file helper
+- sss helper
+- ddd helper
+- sss_if helper
+- ddd_if helper
+- Constants trait
+- ProvidesClassInfo trait
+- MethodHelper class
