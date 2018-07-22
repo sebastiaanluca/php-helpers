@@ -26,7 +26,7 @@
     - [object_hash](#object_hash)
     - [has\_public\_method](#has_public_method)
     - [carbon](#carbon)
-    - [create\_temporary\_file](#create_temporary_file)
+    - [temporary_file](#temporary_file)
 - [Debug global helper functions](#debug-global-helper-functions)
     - [sss](#sss)
     - [ddd](#ddd)
@@ -267,7 +267,7 @@ Carbon\Carbon {
 */
 ```
 
-### create\_temporary\_file
+### temporary_file
 
 Create a temporary file.
 
@@ -278,7 +278,7 @@ The temporary file is readable and writeable by default. The file is automatical
 See [](http://php.net/manual/en/function.tmpfile.php) for more information.
 
 ```php
-create_temporary_file();
+temporary_file();
 
 /*
 [

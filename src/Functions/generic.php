@@ -185,7 +185,7 @@ if (! function_exists('carbon')) {
     }
 }
 
-if (! function_exists('create_temporary_file')) {
+if (! function_exists('temporary_file')) {
     /**
      * Create a temporary file.
      *
@@ -197,7 +197,7 @@ if (! function_exists('create_temporary_file')) {
      *
      * @return array An array with  a `file` and `path` key.
      */
-    function create_temporary_file() : array
+    function temporary_file() : array
     {
         $file = tmpfile();
         $path = stream_get_meta_data($file)['uri'];
