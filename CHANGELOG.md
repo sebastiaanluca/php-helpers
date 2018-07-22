@@ -12,7 +12,7 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 
 - rand_bool helper
 - str_wrap helper
-_ is\_assoc\_array helper
+- is\_assoc\_array helper
 - array_expand helper
 - array_without helper
 - array\_pull\_value helper
