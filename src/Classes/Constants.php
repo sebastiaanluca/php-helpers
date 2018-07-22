@@ -23,7 +23,7 @@ trait Constants
      */
     public static function keys() : array
     {
-        return array_keys(static::all());
+        return array_keys(static::constants());
     }
 
     /**
@@ -33,6 +33,6 @@ trait Constants
      */
     public static function values() : array
     {
-        return array_values(static::all());
+        return array_values(static::constants());
     }
 }

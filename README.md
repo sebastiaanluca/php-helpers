@@ -1,20 +1,14 @@
-<p align="center">
+# An extensive set of PHP helper functions and classes
+
 <a href="https://packagist.org/packages/sebastiaanluca/php-helpers"><img src="https://poser.pugx.org/sebastiaanluca/php-helpers/version" alt="Latest stable release"></img></a>
 <a href="LICENSE.md"><img src="https://img.shields.io/badge/license-MIT-brightgreen.svg" alt="Software license"></img></a>
 <a href="https://travis-ci.org/sebastiaanluca/php-helpers"><img src="https://img.shields.io/travis/sebastiaanluca/php-helpers/master.svg" alt="Build status"></img></a>
 <a href="https://packagist.org/packages/sebastiaanluca/php-helpers"><img src="https://img.shields.io/packagist/dt/sebastiaanluca/php-helpers.svg" alt="Total downloads"></img></a>
-</p>
 
-<p align="center">
 <a href="https://blog.sebastiaanluca.com"><img src="https://img.shields.io/badge/link-blog-lightgrey.svg" alt="Read my blog"></img></a>
 <a href="https://packagist.org/packages/sebastiaanluca"><img src="https://img.shields.io/badge/link-other_packages-lightgrey.svg" alt="View my other packages and projects"></img></a>
 <a href="https://twitter.com/sebastiaanluca"><img src="https://img.shields.io/twitter/follow/sebastiaanluca.svg?style=social" alt="Follow @sebastiaanluca on Twitter"></img></a>
 <a href="https://twitter.com/intent/tweet?text=Check%20out%20this%20extensive%20set%20of%20generic%20PHP%20helper%20functions%20and%20classes!%20Via%20@sebastiaanluca%20https://github.com/sebastiaanluca/php-helpers"><img src="https://img.shields.io/twitter/url/http/shields.io.svg?style=social" alt="Share this package on Twitter"></img></a>
-</p>
-
-# PHP Helpers
-
-**An extensive set of PHP helper functions and classes.**
 
 ## Table of contents
 
@@ -32,7 +26,7 @@
     - [object_hash](#object_hash)
     - [has\_public\_method](#has_public_method)
     - [carbon](#carbon)
-    - [create\_temporary\_file](#create_temporary_file)
+    - [temporary_file](#temporary_file)
 - [Debug global helper functions](#debug-global-helper-functions)
     - [sss](#sss)
     - [ddd](#ddd)
@@ -273,7 +267,7 @@ Carbon\Carbon {
 */
 ```
 
-### create\_temporary\_file
+### temporary_file
 
 Create a temporary file.
 
@@ -284,7 +278,7 @@ The temporary file is readable and writeable by default. The file is automatical
 See [](http://php.net/manual/en/function.tmpfile.php) for more information.
 
 ```php
-create_temporary_file();
+temporary_file();
 
 /*
 [
@@ -576,7 +570,6 @@ If you discover any security related issues, please email [hello@sebastiaanluca.
 ## Credits
 
 - [Sebastiaan Luca][link-github-profile]
-- Logo by [Vitor Caneco](https://github.com/caneco)
 - [All Contributors][link-contributors]
 
 ## About

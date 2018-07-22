@@ -118,17 +118,9 @@ class GenericHelpersTest extends TestCase
     /**
      * @test
      */
-    public function carbonize creates a carbon instance from a string() : void
+    public function carbon creates a carbon instance from a string() : void
     {
-        $this->assertEquals(new Carbon('tomorrow'), carbonize('tomorrow'));
-    }
-
-    /**
-     * @test
-     */
-    public function take creates a pipe item() : void
-    {
-        $this->assertInstanceOf(Item::class, take('value'));
+        $this->assertEquals(new Carbon('tomorrow'), carbon('tomorrow'));
     }
 
     /**
@@ -154,9 +146,9 @@ class GenericHelpersTest extends TestCase
     /**
      * @test
      */
-    public function create_temporary_file creates a temporary file and returns its pointer and full path() : void
+    public function temporary_file creates a temporary file and returns its pointer and full path() : void
     {
-        $file = create_temporary_file();
+        $file = temporary_file();
 
         $this->assertArrayHasKey('file', $file);
         $this->assertArrayHasKey('path', $file);
@@ -170,9 +162,9 @@ class GenericHelpersTest extends TestCase
     /**
      * @test
      */
-    public function the file created by create_temporary_file is automatically deleted when it goes out of scope() : void
+    public function the file created by temporary_file is automatically deleted when it goes out of scope() : void
     {
-        $file = create_temporary_file();
+        $file = temporary_file();
 
         $path = $file['path'];
 

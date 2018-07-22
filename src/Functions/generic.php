@@ -2,6 +2,7 @@
 
 use Carbon\Carbon;
 use SebastiaanLuca\PhpHelpers\Classes\MethodHelper;
+use SebastiaanLuca\PhpHelpers\InternalHelpers;
 
 if (! function_exists('rand_bool')) {
     /**
@@ -64,8 +65,7 @@ if (! function_exists('array_expand')) {
         $expanded = [];
 
         foreach ($array as $key => $value) {
-            // FIXME
-            array_set($expanded, $key, $value);
+            InternalHelpers::arraySet($expanded, $key, $value);
         }
 
         return $expanded;
@@ -83,8 +83,9 @@ if (! function_exists('array_without')) {
      */
     function array_without(array $array, $values) : array
     {
-        // FIXME
-        return array_values(array_diff($array, array_wrap($values)));
+        $values = ! is_array($values) ? [$values] : $values;
+
+        return array_values(array_diff($array, $values));
     }
 }
 
@@ -185,7 +186,7 @@ if (! function_exists('carbon')) {
     }
 }
 
-if (! function_exists('create_temporary_file')) {
+if (! function_exists('temporary_file')) {
     /**
      * Create a temporary file.
      *
@@ -197,7 +198,7 @@ if (! function_exists('create_temporary_file')) {
      *
      * @return array An array with  a `file` and `path` key.
      */
-    function create_temporary_file() : array
+    function temporary_file() : array
     {
         $file = tmpfile();
         $path = stream_get_meta_data($file)['uri'];

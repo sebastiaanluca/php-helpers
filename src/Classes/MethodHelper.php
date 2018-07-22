@@ -25,8 +25,8 @@ class MethodHelper
 
         try {
             $reflection = new ReflectionMethod($object, $method);
-            // FIXME
-            $type = 'is' . studly_case($type);
+
+            $type = 'is' . ucfirst($type);
 
             return $reflection->{$type}();
         } catch (ReflectionException $exception) {
