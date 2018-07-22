@@ -118,17 +118,9 @@ class GenericHelpersTest extends TestCase
     /**
      * @test
      */
-    public function carbonize creates a carbon instance from a string() : void
+    public function carbon creates a carbon instance from a string() : void
     {
-        $this->assertEquals(new Carbon('tomorrow'), carbonize('tomorrow'));
-    }
-
-    /**
-     * @test
-     */
-    public function take creates a pipe item() : void
-    {
-        $this->assertInstanceOf(Item::class, take('value'));
+        $this->assertEquals(new Carbon('tomorrow'), carbon('tomorrow'));
     }
 
     /**
