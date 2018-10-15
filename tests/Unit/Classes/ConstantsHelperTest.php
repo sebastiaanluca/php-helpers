@@ -2,7 +2,7 @@
 
 namespace SebastiaanLuca\Helpers\Tests\Unit\Classes;
 
-use SebastiaanLuca\PhpHelpers\Classes\Constants;
+use SebastiaanLuca\PhpHelpers\Classes\Enums;
 use SebastiaanLuca\PhpHelpers\Tests\TestCase;
 
 class ConstantsHelperTest extends TestCase
@@ -14,7 +14,7 @@ class ConstantsHelperTest extends TestCase
     {
         $class = new class
         {
-            use Constants;
+            use Enums;
 
             public const FIRST_CONSTANT = 1;
             public const SECOND_CONSTANT = 2;
@@ -25,7 +25,7 @@ class ConstantsHelperTest extends TestCase
             'FIRST_CONSTANT' => 1,
             'SECOND_CONSTANT' => 2,
             'THIRD_CONSTANT' => 3,
-        ], $class::constants());
+        ], $class::enums());
     }
 
     /**
@@ -35,7 +35,7 @@ class ConstantsHelperTest extends TestCase
     {
         $class = new class
         {
-            use Constants;
+            use Enums;
 
             public const FIRST_CONSTANT = 1;
             public const SECOND_CONSTANT = 2;
@@ -56,7 +56,7 @@ class ConstantsHelperTest extends TestCase
     {
         $class = new class
         {
-            use Constants;
+            use Enums;
 
             public const FIRST_CONSTANT = 1;
             public const SECOND_CONSTANT = 'two';

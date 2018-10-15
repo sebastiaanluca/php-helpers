@@ -6,6 +6,10 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 
 ## Unreleased
 
+### Changed
+
+- Renamed `Constants` to `Enums` to better reflect their purpose
+
 ## 1.0.0 (2018-07-22)
 
 ### Added

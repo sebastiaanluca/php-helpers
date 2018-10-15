@@ -4,14 +4,14 @@ namespace SebastiaanLuca\PhpHelpers\Classes;
 
 use ReflectionClass;
 
-trait Constants
+trait Enums
 {
     /**
      * Get all the class constants.
      *
      * @return array
      */
-    public static function constants() : array
+    public static function enums() : array
     {
         return (new ReflectionClass(__CLASS__))->getConstants();
     }
@@ -23,7 +23,7 @@ trait Constants
      */
     public static function keys() : array
     {
-        return array_keys(static::constants());
+        return array_keys(static::enums());
     }
 
     /**
@@ -33,6 +33,6 @@ trait Constants
      */
     public static function values() : array
     {
-        return array_values(static::constants());
+        return array_values(static::enums());
     }
 }
