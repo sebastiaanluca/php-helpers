@@ -4,10 +4,10 @@ namespace SebastiaanLuca\PhpHelpers\Classes;
 
 use ReflectionClass;
 
-trait Enums
+trait Enum
 {
     /**
-     * Get all the class constants.
+     * Get all the elements of the enumerator.
      *
      * @return array
      */
@@ -17,7 +17,7 @@ trait Enums
     }
 
     /**
-     * Get all the names of the class constants.
+     * Get all the names of the elements.
      *
      * @return array
      */
@@ -27,7 +27,7 @@ trait Enums
     }
 
     /**
-     * Get all the values of the class constants.
+     * Get all the values of the elements.
      *
      * @return array
      */
