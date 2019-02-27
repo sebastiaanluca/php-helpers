@@ -6,6 +6,8 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 
 ## Unreleased
 
+## 2.0.0 (2019-02-27)
+
 ### Changed
 
 - Renamed `Constants` to `Enum` to better reflect their purpose
