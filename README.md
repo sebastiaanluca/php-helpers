@@ -377,35 +377,35 @@ See the [ddd helper](#ddd) for example output.
 
 ## Class helpers
 
-### Constants trait
+### Enum trait
 
-The primary use of the `Constants` trait is to enable you to store all constants of a specific type in a single class or value object and have it return those with a single call.
+The primary use of the `Enum` trait is to enable you to store all cases of a specific type in a single class or value object and have it return those with a single call.
 
-This can be useful for instance when your database uses integers to store states, but you want to use descriptive strings throughout your code (i.e. enums). It also allows you to refactor these constants at any time without having to waste time searching your code for any raw values (and probably miss a few, introducing new bugs along the way).
+This can be useful for instance when your database uses integers to store states, but you want to use descriptive strings throughout your code (i.e. enums). It also allows you to refactor these elements at any time without having to waste time searching your code for any raw values (and probably miss a few, introducing new bugs along the way).
 
-#### Retrieving constants
+#### Retrieving elements
 
-Returns an array of constant keys and their values.
+Returns an array of element keys and their values.
 
 ```php
 <?php
 
-use SebastiaanLuca\PhpHelpers\Classes\Constants;
+use SebastiaanLuca\PhpHelpers\Classes\Enum;
 
 class UserStates
 {
-    use Constants;
+    use Enum;
 
     public const REGISTERED = 'registered';
     public const ACTIVATED = 'activated';
     public const DISABLED = 'disabled';
 }
 
-UserStates::constants();
+UserStates::enums();
 
 // or
 
-(new UserStates)->constants();
+(new UserStates)->enums();
 
 /*
 [
@@ -416,18 +416,18 @@ UserStates::constants();
 */
 ```
 
-#### Retrieving constant keys
+#### Retrieving element keys
 
-Returns all the keys of constants in a class.
+Returns all the keys of the elements in an enum.
 
 ```php
 <?php
 
-use SebastiaanLuca\PhpHelpers\Classes\Constants;
+use SebastiaanLuca\PhpHelpers\Classes\Enum;
 
 class UserStates
 {
-    use Constants;
+    use Enum;
 
     public const REGISTERED = 'registered';
     public const ACTIVATED = 'activated';
@@ -447,16 +447,16 @@ UserStates::keys();
 
 #### Retrieving constant values
 
-Returns all the values of constants in a class.
+Returns all the values of the elements in an enum.
 
 ```php
 <?php
 
-use SebastiaanLuca\PhpHelpers\Classes\Constants;
+use SebastiaanLuca\PhpHelpers\Classes\Enum;
 
 class UserStates
 {
-    use Constants;
+    use Enum;
 
     public const REGISTERED = 'registered';
     public const ACTIVATED = 'activated';
@@ -561,7 +561,7 @@ composer test
 
 ## Contributing
 
-Please see [CONTRIBUTING](CONTRIBUTING.md) and [CONDUCT](CONDUCT.md) for details.
+Please see [CONTRIBUTING](CONTRIBUTING.md) and [CODE OF CONDUCT](CODE_OF_CONDUCT.md) for details.
 
 ## Security
 

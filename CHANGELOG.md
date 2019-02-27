@@ -6,13 +6,21 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 
 ## Unreleased
 
+## 2.0.0 (2019-02-27)
+
+### Changed
+
+- Renamed `Constants` to `Enum` to better reflect their purpose
+- Upgraded to PHPUnit 8
+- Test against PHP 7.3 and 7.4
+
 ## 1.0.0 (2018-07-22)
 
 ### Added
 
 - rand_bool helper
 - str_wrap helper
-_ is\_assoc\_array helper
+- is\_assoc\_array helper
 - array_expand helper
 - array_without helper
 - array\_pull\_value helper
