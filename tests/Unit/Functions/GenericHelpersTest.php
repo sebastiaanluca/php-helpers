@@ -12,7 +12,7 @@ class GenericHelpersTest extends TestCase
      */
     public function rand_bool returns a random bool() : void
     {
-        $this->assertInternalType('bool', rand_bool());
+        $this->assertIsBool(rand_bool());
     }
 
     /**
@@ -153,9 +153,9 @@ class GenericHelpersTest extends TestCase
         $this->assertArrayHasKey('file', $file);
         $this->assertArrayHasKey('path', $file);
 
-        $this->assertInternalType('resource', $file['file']);
+        $this->assertIsResource($file['file']);
 
-        $this->assertInternalType('string', $file['path']);
+        $this->assertIsString($file['path']);
         $this->assertFileExists($file['path']);
     }
 
