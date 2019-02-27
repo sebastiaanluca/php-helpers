@@ -9,6 +9,8 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 ### Changed
 
 - Renamed `Constants` to `Enum` to better reflect their purpose
+- Upgraded to PHPUnit 8
+- Test against PHP 7.3 and 7.4
 
 ## 1.0.0 (2018-07-22)
 
