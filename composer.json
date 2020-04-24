@@ -26,9 +26,9 @@
         "php": "^7.2"
     },
     "require-dev": {
-        "kint-php/kint": "^3.1",
+        "kint-php/kint": "^3.3",
         "nesbot/carbon": "^1.22|^2.0",
-        "phpunit/phpunit": "^8.2"
+        "phpunit/phpunit": "^8.5"
     },
     "suggest": {
         "kint-php/kint": "A powerful and modern PHP debugging tool. Required for the debug helpers.",
