@@ -23,15 +23,13 @@
         }
     ],
     "require": {
-        "php": "^7.2"
+        "php": "^8.0"
     },
     "require-dev": {
-        "kint-php/kint": "^3.3",
-        "nesbot/carbon": "^1.22|^2.0",
-        "phpunit/phpunit": "^8.5"
+        "nesbot/carbon": "^2.0",
+        "phpunit/phpunit": "^9.5"
     },
     "suggest": {
-        "kint-php/kint": "A powerful and modern PHP debugging tool. Required for the debug helpers.",
         "nesbot/carbon": "A simple PHP API extension for DateTime. Required for the carbon helper."
     },
     "autoload": {
@@ -39,8 +37,7 @@
             "SebastiaanLuca\\PhpHelpers\\": "src"
         },
         "files": [
-            "src/Functions/generic.php",
-            "src/Functions/debug.php"
+            "src/Functions/generic.php"
         ]
     },
     "autoload-dev": {

@@ -4,7 +4,18 @@ All Notable changes to `sebastiaanluca/php-helpers` will be documented in this f
 
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) principles.
 
-## Unreleased
+## 3.0.0 (2021-03-11)
+
+### Added
+
+- Added support for PHP 8
+
+### Removed
+
+- Dropped support for PHP 7.4 and lower
+- Dropped support for Carbon 1.x
+- Removed Kint package requirement
+- Removed debug helpers
 
 ## 2.0.0 (2019-02-27)
 

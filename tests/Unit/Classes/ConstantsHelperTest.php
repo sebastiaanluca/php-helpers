@@ -10,10 +10,9 @@ class ConstantsHelperTest extends TestCase
     /**
      * @test
      */
-    public function it returns all constants() : void
+    public function it returns all constants(): void
     {
-        $class = new class
-        {
+        $class = new class {
             use Enum;
 
             public const FIRST_CONSTANT = 1;
@@ -21,7 +20,7 @@ class ConstantsHelperTest extends TestCase
             public const THIRD_CONSTANT = 3;
         };
 
-        $this->assertEquals([
+        static::assertEquals([
             'FIRST_CONSTANT' => 1,
             'SECOND_CONSTANT' => 2,
             'THIRD_CONSTANT' => 3,
@@ -31,10 +30,9 @@ class ConstantsHelperTest extends TestCase
     /**
      * @test
      */
-    public function it returns all constant names() : void
+    public function it returns all constant names(): void
     {
-        $class = new class
-        {
+        $class = new class {
             use Enum;
 
             public const FIRST_CONSTANT = 1;
@@ -42,7 +40,7 @@ class ConstantsHelperTest extends TestCase
             public const THIRD_CONSTANT = 'three';
         };
 
-        $this->assertEquals([
+        static::assertEquals([
             'FIRST_CONSTANT',
             'SECOND_CONSTANT',
             'THIRD_CONSTANT',
@@ -52,10 +50,9 @@ class ConstantsHelperTest extends TestCase
     /**
      * @test
      */
-    public function it returns all constant values() : void
+    public function it returns all constant values(): void
     {
-        $class = new class
-        {
+        $class = new class {
             use Enum;
 
             public const FIRST_CONSTANT = 1;
@@ -63,7 +60,7 @@ class ConstantsHelperTest extends TestCase
             public const THIRD_CONSTANT = 3;
         };
 
-        $this->assertEquals([
+        static::assertEquals([
             1,
             'two',
             3,
