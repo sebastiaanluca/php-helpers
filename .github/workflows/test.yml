@@ -39,7 +39,7 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php }}
-          extensions: curl, mbstring, pdo
+          extensions: mbstring
           coverage: none
 
       - name: Install dependencies

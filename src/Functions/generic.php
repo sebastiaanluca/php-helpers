@@ -10,7 +10,7 @@ if (! function_exists('rand_bool')) {
      *
      * @return bool
      */
-    function rand_bool() : bool
+    function rand_bool(): bool
     {
         return random_int(0, 1) === 0;
     }
@@ -25,9 +25,9 @@ if (! function_exists('str_wrap')) {
      *
      * @return string
      */
-    function str_wrap($string, $wrapper) : string
+    function str_wrap($string, $wrapper): string
     {
-        return $wrapper . $string . $wrapper;
+        return $wrapper.$string.$wrapper;
     }
 }
 
@@ -42,7 +42,7 @@ if (! function_exists('is_assoc_array')) {
      *
      * @return bool
      */
-    function is_assoc_array($array) : bool
+    function is_assoc_array($array): bool
     {
         return array_keys($array) !== range(0, count($array) - 1);
     }
@@ -60,7 +60,7 @@ if (! function_exists('array_expand')) {
      *
      * @return array
      */
-    function array_expand(array $array) : array
+    function array_expand(array $array): array
     {
         $expanded = [];
 
@@ -81,7 +81,7 @@ if (! function_exists('array_without')) {
      *
      * @return array
      */
-    function array_without(array $array, $values) : array
+    function array_without(array $array, $values): array
     {
         $values = ! is_array($values) ? [$values] : $values;
 
@@ -100,7 +100,7 @@ if (! function_exists('array_pull_values')) {
      *
      * @return array
      */
-    function array_pull_values(array &$array, array $values) : array
+    function array_pull_values(array &$array, array $values): array
     {
         $matches = array_values(array_intersect($array, $values));
 
@@ -137,7 +137,7 @@ if (! function_exists('array_hash')) {
      *
      * @return string
      */
-    function array_hash(array $array) : string
+    function array_hash(array $array): string
     {
         return md5(serialize($array));
     }
@@ -151,7 +151,7 @@ if (! function_exists('object_hash')) {
      *
      * @return string
      */
-    function object_hash($object) : string
+    function object_hash($object): string
     {
         return md5(serialize($object));
     }
@@ -166,7 +166,7 @@ if (! function_exists('has_public_method')) {
      *
      * @return bool
      */
-    function has_public_method($object, $method) : bool
+    function has_public_method($object, $method): bool
     {
         return MethodHelper::hasPublicMethod($object, $method);
     }
@@ -180,7 +180,7 @@ if (! function_exists('carbon')) {
      *
      * @return \Carbon\Carbon
      */
-    function carbon($timeString = null) : Carbon
+    function carbon($timeString = null): Carbon
     {
         return new \Carbon\Carbon($timeString);
     }
@@ -198,7 +198,7 @@ if (! function_exists('temporary_file')) {
      *
      * @return array An array with  a `file` and `path` key.
      */
-    function temporary_file() : array
+    function temporary_file(): array
     {
         $file = tmpfile();
         $path = stream_get_meta_data($file)['uri'];

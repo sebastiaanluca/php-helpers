@@ -2,7 +2,7 @@
 
 [![Latest stable release][version-badge]][link-packagist]
 [![Software license][license-badge]](LICENSE.md)
-[![Build status][travis-badge]][link-travis]
+[![Build status][githubaction-badge]][link-githubaction]
 [![Total downloads][downloads-badge]][link-packagist]
 [![Total stars][stars-badge]][link-github]
 
@@ -45,7 +45,7 @@
 
 ## Requirements
 
-- PHP 7.2 or higher
+- PHP 8 or higher
 
 ## How to install
 
@@ -500,7 +500,7 @@ Have a project that could use some guidance? Send me an e-mail at [hello@sebasti
 
 [version-badge]: https://img.shields.io/packagist/v/sebastiaanluca/php-helpers.svg?label=stable
 [license-badge]: https://img.shields.io/badge/license-MIT-informational.svg
-[travis-badge]: https://img.shields.io/travis/sebastiaanluca/php-helpers/master.svg
+[githubaction-badge]: https://github.com/sebastiaanluca/php-helpers/actions/workflows/test.yml/badge.svg?branch=master
 [downloads-badge]: https://img.shields.io/packagist/dt/sebastiaanluca/php-helpers.svg?color=brightgreen
 [stars-badge]: https://img.shields.io/github/stars/sebastiaanluca/php-helpers.svg?color=brightgreen
 
@@ -511,7 +511,7 @@ Have a project that could use some guidance? Send me an e-mail at [hello@sebasti
 
 [link-github]: https://github.com/sebastiaanluca/php-helpers
 [link-packagist]: https://packagist.org/packages/sebastiaanluca/php-helpers
-[link-travis]: https://travis-ci.org/sebastiaanluca/php-helpers
+[link-githubaction]: https://github.com/sebastiaanluca/php-helpers/actions/workflows/test.yml?query=branch%3Amaster
 [link-twitter-share]: https://twitter.com/intent/tweet?text=Check%20out%20this%20extensive%20set%20of%20generic%20PHP%20helper%20functions%20and%20classes!%20Via%20@sebastiaanluca%20https://github.com/sebastiaanluca/php-helpers
 [link-contributors]: ../../contributors
 
