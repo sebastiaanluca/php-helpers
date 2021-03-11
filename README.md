@@ -2,7 +2,7 @@
 
 [![Latest stable release][version-badge]][link-packagist]
 [![Software license][license-badge]](LICENSE.md)
-[![Build status][travis-badge]][link-travis]
+[![Build status][githubaction-badge]][link-githubaction]
 [![Total downloads][downloads-badge]][link-packagist]
 [![Total stars][stars-badge]][link-github]
 
@@ -28,11 +28,6 @@
     - [has\_public\_method](#has_public_method)
     - [carbon](#carbon)
     - [temporary_file](#temporary_file)
-- [Debug global helper functions](#debug-global-helper-functions)
-    - [sss](#sss)
-    - [ddd](#ddd)
-    - [sss_if](#sss_if)
-    - [ddd_if](#ddd_if)
 - [Class helpers](#class-helpers)
     - [Constants trait](#constants-trait)
         - [Retrieving constants](#retrieving-constants)
@@ -50,7 +45,7 @@
 
 ## Requirements
 
-- PHP 7.2 or higher
+- PHP 8 or higher
 
 ## How to install
 
@@ -300,82 +295,6 @@ temporary_file();
 */
 ```
 
-## Global debug helper functions
-
-### sss
-
-Display structured debug information about one or more values **in plain text** using Kint and halt script execution afterwards. Accepts multiple arguments to dump.
-
-Output will be identical to `ddd` when used in a command line interface. In a browser, it'll display plain, but structured text.
-
-Requires the [kint-php/kint](https://github.com/raveren/kint) package.
-
-```php
-sss('string');
-
-/*
-┌─────────────────────────────────────────┐
-│ literal                                 │
-└─────────────────────────────────────────┘
-string (6) "string"
-═══════════════════════════════════════════
-Called from .../src/MyClass.php:42
-*/
-
-sss('string', 0.42, ['array']);
-
-/*
-┌─────────────────────────────────────────┐
-│ literal                                 │
-└─────────────────────────────────────────┘
-string (6) "string"
-┌─────────────────────────────────────────┐
-│ literal                                 │
-└─────────────────────────────────────────┘
-double 0.42
-┌─────────────────────────────────────────┐
-│ literal                                 │
-└─────────────────────────────────────────┘
-array (1) [
-    0 => string (5) "array"
-]
-═══════════════════════════════════════════
-Called from .../src/MyClass.php:42
-*/
-```
-
-### ddd
-
-Display structured debug information about one or more values using Kint and halt script execution afterwards. Accepts multiple arguments to dump. Output will be identical to `sss` when used in a command line interface. In a browser, it'll display an interactive, structured tree-view.
-
-Requires the [kint-php/kint](https://github.com/raveren/kint) package.
-
-See the [sss helper](#sss) for example output.
-
-### sss_if
-
-Display structured debug information about one or more values **in plain text** using Kint and halt script execution afterwards, but only if the condition is truthy. Does nothing if falsy. Accepts multiple arguments to dump.
-
-Requires the [kint-php/kint](https://github.com/raveren/kint) package.
-
-```php
-sss_if($user->last_name, 'User has a last name', $user->last_name);
-```
-
-See the [sss helper](#sss) for example output.
-
-### ddd_if
-
-Display structured debug information about one or more values using Kint and halt script execution afterwards, but only if the condition is truthy. Does nothing if falsy. Accepts multiple arguments to dump.
-
-Requires the [kint-php/kint](https://github.com/raveren/kint) package.
-
-```php
-ddd_if(app()->environment('local'), 'Debugging in a local environment!');
-```
-
-See the [ddd helper](#ddd) for example output.
-
 ## Class helpers
 
 ### Enum trait
@@ -581,7 +500,7 @@ Have a project that could use some guidance? Send me an e-mail at [hello@sebasti
 
 [version-badge]: https://img.shields.io/packagist/v/sebastiaanluca/php-helpers.svg?label=stable
 [license-badge]: https://img.shields.io/badge/license-MIT-informational.svg
-[travis-badge]: https://img.shields.io/travis/sebastiaanluca/php-helpers/master.svg
+[githubaction-badge]: https://github.com/sebastiaanluca/php-helpers/actions/workflows/test.yml/badge.svg?branch=master
 [downloads-badge]: https://img.shields.io/packagist/dt/sebastiaanluca/php-helpers.svg?color=brightgreen
 [stars-badge]: https://img.shields.io/github/stars/sebastiaanluca/php-helpers.svg?color=brightgreen
 
@@ -592,7 +511,7 @@ Have a project that could use some guidance? Send me an e-mail at [hello@sebasti
 
 [link-github]: https://github.com/sebastiaanluca/php-helpers
 [link-packagist]: https://packagist.org/packages/sebastiaanluca/php-helpers
-[link-travis]: https://travis-ci.org/sebastiaanluca/php-helpers
+[link-githubaction]: https://github.com/sebastiaanluca/php-helpers/actions/workflows/test.yml?query=branch%3Amaster
 [link-twitter-share]: https://twitter.com/intent/tweet?text=Check%20out%20this%20extensive%20set%20of%20generic%20PHP%20helper%20functions%20and%20classes!%20Via%20@sebastiaanluca%20https://github.com/sebastiaanluca/php-helpers
 [link-contributors]: ../../contributors
 

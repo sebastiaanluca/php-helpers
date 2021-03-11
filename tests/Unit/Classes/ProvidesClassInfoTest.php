@@ -23,7 +23,7 @@ class ProvidesClassInfoTest extends TestCase
             }
         };
 
-        $this->assertSame(
+        static::assertSame(
             dirname((new ReflectionClass($this))->getFileName()),
             $class->getDirectory()
         );

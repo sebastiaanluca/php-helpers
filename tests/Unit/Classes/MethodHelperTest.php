@@ -10,80 +10,75 @@ class MethodHelperTest extends TestCase
     /**
      * @test
      */
-    public function it detects if a method of a certain visibility exists() : void
+    public function it detects if a method of a certain visibility exists(): void
     {
-        $class = new class
-        {
-            private function myMethod() : bool
+        $class = new class {
+            private function myMethod(): bool
             {
                 return true;
             }
         };
 
-        $this->assertTrue(MethodHelper::hasMethodOfType($class, 'myMethod', 'private'));
+        static::assertTrue(MethodHelper::hasMethodOfType($class, 'myMethod', 'private'));
     }
 
     /**
      * @test
      */
-    public function it detects a missing method() : void
+    public function it detects a missing method(): void
     {
-        $class = new class
-        {
-            protected function myMethod() : bool
+        $class = new class {
+            protected function myMethod(): bool
             {
                 return true;
             }
         };
 
-        $this->assertFalse(MethodHelper::hasMethodOfType($class, 'myInvalidMethod', 'protected'));
+        static::assertFalse(MethodHelper::hasMethodOfType($class, 'myInvalidMethod', 'protected'));
     }
 
     /**
      * @test
      */
-    public function it detects a method with different visibility() : void
+    public function it detects a method with different visibility(): void
     {
-        $class = new class
-        {
-            public function myMethod() : bool
+        $class = new class {
+            public function myMethod(): bool
             {
                 return true;
             }
         };
 
-        $this->assertFalse(MethodHelper::hasMethodOfType($class, 'myMethod', 'private'));
+        static::assertFalse(MethodHelper::hasMethodOfType($class, 'myMethod', 'private'));
     }
 
     /**
      * @test
      */
-    public function it detects a protected method() : void
+    public function it detects a protected method(): void
     {
-        $class = new class
-        {
-            protected function myMethod() : bool
+        $class = new class {
+            protected function myMethod(): bool
             {
                 return true;
             }
         };
 
-        $this->assertTrue(MethodHelper::hasProtectedMethod($class, 'myMethod'));
+        static::assertTrue(MethodHelper::hasProtectedMethod($class, 'myMethod'));
     }
 
     /**
      * @test
      */
-    public function it detects a public method() : void
+    public function it detects a public method(): void
     {
-        $class = new class
-        {
-            public function myMethod() : bool
+        $class = new class {
+            public function myMethod(): bool
             {
                 return true;
             }
         };
 
-        $this->assertTrue(MethodHelper::hasPublicMethod($class, 'myMethod'));
+        static::assertTrue(MethodHelper::hasPublicMethod($class, 'myMethod'));
     }
 }

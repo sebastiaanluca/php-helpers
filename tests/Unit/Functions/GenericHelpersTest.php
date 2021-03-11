@@ -10,38 +10,38 @@ class GenericHelpersTest extends TestCase
     /**
      * @test
      */
-    public function rand_bool returns a random bool() : void
+    public function rand_bool returns a random bool(): void
     {
-        $this->assertIsBool(rand_bool());
+        static::assertIsBool(rand_bool());
     }
 
     /**
      * @test
      */
-    public function str_wrap wraps a string() : void
+    public function str_wrap wraps a string(): void
     {
-        $this->assertSame('wrappermiddlewrapper', str_wrap('middle', 'wrapper'));
+        static::assertSame('wrappermiddlewrapper', str_wrap('middle', 'wrapper'));
     }
 
     /**
      * @test
      */
-    public function is_assoc_array detects an associative array() : void
+    public function is_assoc_array detects an associative array(): void
     {
-        $this->assertTrue(is_assoc_array([
+        static::assertTrue(is_assoc_array([
             'key1' => 'value1',
             'key2' => 'value2',
         ]));
 
-        $this->assertFalse(is_assoc_array(['value1', 'value2']));
+        static::assertFalse(is_assoc_array(['value1', 'value2']));
     }
 
     /**
      * @test
      */
-    public function array_expand expands a flat array() : void
+    public function array_expand expands a flat array(): void
     {
-        $this->assertSame([
+        static::assertSame([
             'a' => [
                 'b' => [
                     'c' => 1,
@@ -59,77 +59,76 @@ class GenericHelpersTest extends TestCase
     /**
      * @test
      */
-    public function array_without removes values from an array() : void
+    public function array_without removes values from an array(): void
     {
-        $this->assertSame(['a', 1], array_without(['a', 'b', 1], 'b'));
-        $this->assertSame(['a'], array_without(['a', 'b', 1], ['b', 1]));
+        static::assertSame(['a', 1], array_without(['a', 'b', 1], 'b'));
+        static::assertSame(['a'], array_without(['a', 'b', 1], ['b', 1]));
     }
 
     /**
      * @test
      */
-    public function array_pull_values pulls values from an array() : void
-    {
-        $array = ['a', 'b', 'c'];
-
-        $this->assertSame(['b'], array_pull_values($array, ['b']));
-        $this->assertSame(['a', 'c'], $array);
-    }
-
-    /**
-     * @test
-     */
-    public function array_pull_value pulls a value from an array() : void
+    public function array_pull_values pulls values from an array(): void
     {
         $array = ['a', 'b', 'c'];
 
-        $this->assertSame('b', array_pull_value($array, 'b'));
-        $this->assertSame(['a', 'c'], $array);
+        static::assertSame(['b'], array_pull_values($array, ['b']));
+        static::assertSame(['a', 'c'], $array);
     }
 
     /**
      * @test
      */
-    public function array_hash generates an array hash() : void
+    public function array_pull_value pulls a value from an array(): void
+    {
+        $array = ['a', 'b', 'c'];
+
+        static::assertSame('b', array_pull_value($array, 'b'));
+        static::assertSame(['a', 'c'], $array);
+    }
+
+    /**
+     * @test
+     */
+    public function array_hash generates an array hash(): void
     {
         $hash = '9ae1f8db3c2cc8381e0811dda3316176';
 
-        $this->assertSame($hash, array_hash(['value']));
-        $this->assertNotSame($hash, array_hash(['value1', 'value2']));
+        static::assertSame($hash, array_hash(['value']));
+        static::assertNotSame($hash, array_hash(['value1', 'value2']));
     }
 
     /**
      * @test
      */
-    public function object_hash generate an object hash() : void
+    public function object_hash generate an object hash(): void
     {
         $object = new \stdClass;
         $object->property = 'value';
 
         $hash = '5439deb4526e33a32ffa80a485c623c4';
 
-        $this->assertSame($hash, object_hash($object));
+        static::assertSame($hash, object_hash($object));
 
         $object->property2 = 'value2';
 
-        $this->assertNotSame($hash, object_hash($object));
+        static::assertNotSame($hash, object_hash($object));
     }
 
     /**
      * @test
      */
-    public function carbon creates a carbon instance from a string() : void
+    public function carbon creates a carbon instance from a string(): void
     {
-        $this->assertEquals(new Carbon('tomorrow'), carbon('tomorrow'));
+        static::assertEquals(new Carbon('tomorrow'), carbon('tomorrow'));
     }
 
     /**
      * @test
      */
-    public function has_public_method checks if a public method exists() : void
+    public function has_public_method checks if a public method exists(): void
     {
-        $class = new class
-        {
+        $class = new class {
             /**
              * @test
              */
@@ -139,30 +138,30 @@ class GenericHelpersTest extends TestCase
             }
         };
 
-        $this->assertTrue(has_public_method($class, 'myMethod'));
-        $this->assertFalse(has_public_method($class, 'myInvalidMethod'));
+        static::assertTrue(has_public_method($class, 'myMethod'));
+        static::assertFalse(has_public_method($class, 'myInvalidMethod'));
     }
 
     /**
      * @test
      */
-    public function temporary_file creates a temporary file and returns its pointer and full path() : void
+    public function temporary_file creates a temporary file and returns its pointer and full path(): void
     {
         $file = temporary_file();
 
-        $this->assertArrayHasKey('file', $file);
-        $this->assertArrayHasKey('path', $file);
+        static::assertArrayHasKey('file', $file);
+        static::assertArrayHasKey('path', $file);
 
-        $this->assertIsResource($file['file']);
+        static::assertIsResource($file['file']);
 
-        $this->assertIsString($file['path']);
-        $this->assertFileExists($file['path']);
+        static::assertIsString($file['path']);
+        static::assertFileExists($file['path']);
     }
 
     /**
      * @test
      */
-    public function the file created by temporary_file is automatically deleted when it goes out of scope() : void
+    public function the file created by temporary_file is automatically deleted when it goes out of scope(): void
     {
         $file = temporary_file();
 
@@ -170,6 +169,6 @@ class GenericHelpersTest extends TestCase
 
         unset($file);
 
-        $this->assertFileNotExists($path);
+        static::assertFileDoesNotExist($path);
     }
 }
