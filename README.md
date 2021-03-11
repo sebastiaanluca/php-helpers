@@ -515,8 +515,8 @@ Have a project that could use some guidance? Send me an e-mail at [hello@sebasti
 [link-twitter-share]: https://twitter.com/intent/tweet?text=Check%20out%20this%20extensive%20set%20of%20generic%20PHP%20helper%20functions%20and%20classes!%20Via%20@sebastiaanluca%20https://github.com/sebastiaanluca/php-helpers
 [link-contributors]: ../../contributors
 
-[link-portfolio]: https://www.sebastiaanluca.com
-[link-blog]: https://blog.sebastiaanluca.com
+[link-portfolio]: https://sebastiaanluca.com
+[link-blog]: https://sebastiaanluca.com/blog
 [link-packages]: https://packagist.org/packages/sebastiaanluca
 [link-twitter]: https://twitter.com/sebastiaanluca
 [link-github-profile]: https://github.com/sebastiaanluca
