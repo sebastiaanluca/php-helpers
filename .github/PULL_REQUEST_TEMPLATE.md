@@ -27,11 +27,16 @@ Clearly describe what this pull request changes and why.
 1. Clearly state which actions should be performed to fully and correctly review this issue.
 2. …
 
-### Related issues
+## Checklist
 
-Link to the issue(s) this pull request handles.
+To facilitate merging your change and the approval of this PR, please make sure you've reviewed and applied the following:
 
-### Related PRs
+- This PR addresses exactly one issue
+- All changes were made in a fork of this project (preferably also in a separate branch)
+- It follows the code style of this project
+- Tests were added to cover the changes
+- All previously existing tests still pass
+- If the change to the code requires a change to the documentation, it has been updated accordingly
 
-Link to any related pull requests.
+If you're unsure about any of these, don't hesitate to ask. We're here to help!
 
